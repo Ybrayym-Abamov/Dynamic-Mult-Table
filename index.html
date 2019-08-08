@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Multiplication Table</title>
+        <style>
+            .cell {
+                display: inline-block;
+                width: 30px; height: 30px;
+                text-align: right;
+                border: 3px dotted greenyellow;
+                padding: 10px;
+            }
+            .header {
+                background: rgb(192, 46, 10);
+            }
+            button{
+                background-color: blueviolet;
+                height: 25px;
+            }
+        </style>
+    </head>
+
+    <body align="center"> 
+        <h1>Multiplication Table</h1>
+        <!-- <span><button onclick="location.reload();">Refresh</button> -->
+        <span> 
+        <script>
+
+            let multiplicationTable = prompt("Enter your preferred size of multiplication table:")
+            document.write('<span class="cell header">&times;</span>');
+            for (let i = 0; i <= multiplicationTable; i++) {
+                document.write('<span class="cell header">' + i + '</span>');
+            }
+
+            document.write('<br>');
+            
+            for (let i = 0; i <= multiplicationTable; i ++) {
+                document.write('<span class="cell header">' + i + '</span>');
+                for (let j = 0; j<= multiplicationTable; j++) {
+                    document.write('<span class="cell header">' + i * j + '</span>');
+                }
+                document.write('<br>');
+
+            }
+            document.write('<br>');
+
+            document.write ('<button onclick="location.reload();">RELOAD PAGE TO GET NEW TABLE</button>');  
+
+
+
+        </script>
+
+
+    </body>
+</html>
